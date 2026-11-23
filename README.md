@@ -44,7 +44,7 @@ Aucune information postérieure à la date de référence n'entre dans les varia
 
 - **La prédiction est modeste (AUC ≈ 0,66).** C'est un résultat honnête : le recours aux urgences dépend aussi d'événements aigus imprévisibles à partir du seul dossier médical. Le modèle n'améliore que légèrement le score de Brier par rapport au taux moyen.
 - **Le gradient boosting fait un peu mieux** que la régression logistique sur le jeu de test, mais les intervalles de confiance se chevauchent.
-- **Équité** : le modèle surestime le risque chez les femmes (19,4 % prédit contre 16,7 % observé) et le sous-estime chez les hommes (13,4 % contre 16,5 %). Une recalibration par sexe serait nécessaire avant tout usage. Les écarts entre quintiles de revenu reposent sur environ 150 personnes par groupe et sont à interpréter avec prudence.
+- **Équité** : le risque prédit s'écarte du risque observé en sens opposés chez les femmes (19,4 % prédit contre 16,7 % observé, IC 95 % exact 13,2–20,7) et chez les hommes (13,4 % contre 16,5 %, IC 95 % 12,9–20,8). Les deux valeurs prédites restent dans l'intervalle de confiance du taux observé : avec environ 400 personnes par sexe dans le jeu de test, ces écarts peuvent relever du hasard. Pour conclure, il faudrait une cohorte plus grande (Synthea permet d'en générer une gratuitement), puis recalibrer par sexe si l'écart se confirme. Les écarts entre quintiles de revenu reposent sur environ 150 personnes par groupe et sont à interpréter avec prudence.
 
 ## Limites
 
