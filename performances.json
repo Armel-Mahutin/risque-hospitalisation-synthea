@@ -1,0 +1,90 @@
+{
+  "cohorte": {
+    "adultes": 3058,
+    "taux_evenement": 0.166,
+    "apprentissage": 2293,
+    "test": 765
+  },
+  "performances": {
+    "Régression logistique": {
+      "auc_cv": 0.646,
+      "auc_cv_et": 0.039,
+      "auc_test": 0.585,
+      "auc_test_ic": [
+        0.524,
+        0.643
+      ],
+      "brier_test": 0.1332
+    },
+    "Gradient boosting": {
+      "auc_cv": 0.65,
+      "auc_cv_et": 0.011,
+      "auc_test": 0.659,
+      "auc_test_ic": [
+        0.606,
+        0.714
+      ],
+      "brier_test": 0.1302
+    }
+  },
+  "reference_brier": 0.1385,
+  "modele_retenu": "Gradient boosting",
+  "equite": [
+    {
+      "variable": "sexe",
+      "groupe": "F",
+      "n": 402,
+      "taux_observe": 0.167,
+      "risque_predit_moyen": 0.194,
+      "auc": 0.642
+    },
+    {
+      "variable": "sexe",
+      "groupe": "M",
+      "n": 363,
+      "taux_observe": 0.165,
+      "risque_predit_moyen": 0.134,
+      "auc": 0.699
+    },
+    {
+      "variable": "quintile_revenu",
+      "groupe": "Q1 (plus faible)",
+      "n": 153,
+      "taux_observe": 0.176,
+      "risque_predit_moyen": 0.187,
+      "auc": 0.651
+    },
+    {
+      "variable": "quintile_revenu",
+      "groupe": "Q2",
+      "n": 153,
+      "taux_observe": 0.163,
+      "risque_predit_moyen": 0.166,
+      "auc": 0.6
+    },
+    {
+      "variable": "quintile_revenu",
+      "groupe": "Q3",
+      "n": 153,
+      "taux_observe": 0.163,
+      "risque_predit_moyen": 0.174,
+      "auc": 0.759
+    },
+    {
+      "variable": "quintile_revenu",
+      "groupe": "Q4",
+      "n": 153,
+      "taux_observe": 0.176,
+      "risque_predit_moyen": 0.151,
+      "auc": 0.695
+    },
+    {
+      "variable": "quintile_revenu",
+      "groupe": "Q5 (plus élevé)",
+      "n": 153,
+      "taux_observe": 0.15,
+      "risque_predit_moyen": 0.149,
+      "auc": 0.595
+    }
+  ]
+}
